@@ -46,15 +46,19 @@ DNS解析的结果不仅影响客户端的访问路径，还能动态影响路�
 ![(img/image.png)](img/image.png)
 
 ![alt text](img/image5.png)
+
  2. `Routing -> OSPF -> Instances` 创建OSPF Instance
 
 ![alt text](img/image2.png)
+
  3. `Routing -> OSPF -> Areas` 创建OSPF Area
 
 ![alt text](img/image3.png)
+
  4. `Routing -> OSPF -> Interface Templates` 创建OSPF Interface Template
 
 ![alt text](img/image6.png)
+
 #### 路由策略避免网络回环参考致谢链接中的配置方法
 #### 局域网部分ip不走分流
 `Routing -> Rules`中新增路由规则，如下图配置了两个规则为`172.16.1.64/26`、`172.16.1.128/26`，意思为IP第4位在64-128、128-192的局域网设备走proxy-table这个表中的路由，不在这个范围内的设备不会被代理
